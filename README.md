@@ -4,15 +4,13 @@ A calendar for walking my dog Shaq
 
 Add:
 
-Event ID for each event
-
-Persist in DB - Auto Increment ID
-
-
 Event removal
+Undo last
 
 Time since Last tickers
 
 
 Event level filtering
+-Drop down menu
 
+sms /email reminders
