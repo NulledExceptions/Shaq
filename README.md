@@ -7,7 +7,11 @@ Add:
 Event removal
 Undo last
 
-Time since Last tickers
+UI
+Make poo clock brown
+Center flipclocks
+Add title
+Add favicon
 
 
 Event level filtering
