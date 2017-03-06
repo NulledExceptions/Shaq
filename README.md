@@ -5,7 +5,9 @@ A calendar for walking my dog Shaq
 Add:
 
 Event removal
+
 Undo last
+
 
 UI
 
@@ -15,7 +17,6 @@ Center flipclocks
 
 Add title
 
-Add favicon
 
 
 Event level filtering
