@@ -2,6 +2,7 @@
 <html>
     
         <meta charset='utf-8' />
+        <link rel='shortcut icon' href='https://markmarnell.io/images/favicon.ico' type='image/x-icon'/ >
         <link href='./css/fullcalendar.min.css' rel='stylesheet' />
         <link href='./css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
         <link rel="stylesheet" href="./lib/compiled/flipclock.css">
