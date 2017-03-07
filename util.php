@@ -1,7 +1,16 @@
 <?php
-require_once('db.php');
+/*
+add db entry for removed items
 
-function undo_event($eventid){
+fix return statements
+
+change all and last functions to take action as input
+*/
+require_once('db.php');
+function remove_event($id){}
+
+
+function undo_last(){
     $result= mysql_query("SELECT * FROM Shaq order by CAST(id AS UNSIGNED ) DESC limit 1");
 
     if($result === FALSE) {
@@ -9,26 +18,17 @@ function undo_event($eventid){
     }
 
      while($row = mysql_fetch_array($result)){
-          echo $row['action'].' '.$row['time'].' '.$row['id']. '<br>';
-          echo '****';
+        #assert id exists and is num
           $id=$row['id'];
-          echo $id;
+          
      }
-
-     $delete= mysql_query("DELETE FROM Shaq WHERE id='".$row['id']."'");
       $delete= mysql_query("DELETE FROM Shaq WHERE id=$id");
-    #echo "DELETE FROM Shaq WHERE id=".$row['id']."";
+
      if($delete === FALSE) {
          die(mysql_error());
-
-
           }
 
-     echo "<br>NEW last entry:";
-     $result= mysql_query("SELECT * FROM Shaq order by CAST(id AS UNSIGNED ) DESC limit 1");
-    if($result === FALSE) {
-       die(mysql_error());
-    }
+
     }
 
 
@@ -47,8 +47,8 @@ function last_entry(){
 }
 
 
-
- function last_action(){}
+#remove last_*() replace with last_action(*action_param)
+function last_action($action){}
 
 function last_pee(){
    $result= mysql_query("SELECT * FROM Shaq WHERE action='pee' order by CAST(id AS UNSIGNED ) DESC limit 1");
@@ -122,7 +122,7 @@ function all_events(){
 
 
  }
-//var_dump($page_hits);
+
 
 function all_eating(){
     $result= mysql_query("SELECT * FROM Shaq WHERE action ='eat'");
@@ -169,6 +169,5 @@ while($row = mysql_fetch_array($result)){
      echo $row['action'].' '.$row['time'].' '.$row['id']. '<br>';
 }
 }
-#all_events();
-#last_poo();
+
 ?>
